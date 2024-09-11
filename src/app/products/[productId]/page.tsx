@@ -1,3 +1,4 @@
+// Route: "/products/<productId>"
 export default function ProductDetailsPage({
   params,
 }: {
