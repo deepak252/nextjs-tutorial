@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 // Route: "/products/<productId>/reviews/<reviewId>"
 export default function ProductReviewDetailsPage({
   params,
@@ -7,6 +9,9 @@ export default function ProductReviewDetailsPage({
     reviewId: string;
   };
 }) {
+  if (parseInt(params.reviewId) > 100) {
+    notFound();
+  }
   return (
     <div>
       <h3>
