@@ -11,7 +11,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="bg-blue-200">Page Header</header>
+        {children}
+        <footer className="bg-red-200">Page Footer</footer>
+      </body>
     </html>
   );
 }
