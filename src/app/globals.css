@@ -38,3 +38,7 @@ h3 {
 h4 {
   @apply text-2xl font-medium leading-normal;
 }
+
+a {
+  @apply text-blue-500 mx-2 hover:underline;
+}
