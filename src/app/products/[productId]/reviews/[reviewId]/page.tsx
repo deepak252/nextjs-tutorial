@@ -9,6 +9,11 @@ export default function ProductReviewDetailsPage({
     reviewId: string;
   };
 }) {
+  console.log(Number(params.reviewId));
+
+  if (isNaN(Number(params.reviewId))) {
+    throw new Error("Invalid review Id");
+  }
   if (parseInt(params.reviewId) > 100) {
     notFound();
   }
