@@ -24,6 +24,8 @@ export const generateMetadata = async ({
       resolve(`Product ${params.productId}`);
     }, 2000)
   );
+  console.log({ title });
+
   return {
     title,
   };
