@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Notifications() {
   return (
     <Card>
-      Default Notifications
-      <Link href="/complex-dashboard/archived">Archived</Link>
+      Arvhived Notifications
+      <Link href="/complex-dashboard">Default</Link>
     </Card>
   );
 }
