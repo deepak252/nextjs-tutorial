@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 const navLinks = [
   { name: "Login", href: "/login" },
@@ -15,8 +15,8 @@ export default function WithAuthLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  console.log(pathname);
-
+  const [value, setValue] = useState("");
+  // State will be preserved for this layout on auth navigation
   return (
     <div>
       {navLinks.map(({ name, href }) => {
@@ -32,6 +32,13 @@ export default function WithAuthLayout({
         );
       })}
       <h4>Login/Register Group Layout</h4>
+      <input
+        placeholder="Layout Input"
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        className="border"
+      ></input>
       {children}
     </div>
   );
